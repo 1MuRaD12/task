@@ -6,38 +6,20 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(isOdd());
+            string word = "Bu, bir, methoddur";
+            Name(word);
 
-            Console.WriteLine(isEven());
+        }
+        public static void Name(string word)
+        {
+            string[] Word = word.Split(',');
+            foreach (var item in Word)
+            {
+                Console.WriteLine(item);
+            }
             
+            string word1 = string.Join(" ", word);
+            Console.WriteLine(word1);
         }
-        private static bool isOdd()
-        {
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 != 0)
-            {
-                return true;
-
-            }
-            else
-            {
-                return false;
-            }
-
-           
-        }
-        private static bool isEven()
-        {
-            int num = Convert.ToInt32(Console.ReadLine());
-            if (num % 2 == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
     }
 }
